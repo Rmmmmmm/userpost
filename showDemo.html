@@ -1,0 +1,136 @@
+<!--
+To change this template, choose Tools | Templates
+and open the template in the editor.
+-->
+<!DOCTYPE html>
+<html>
+    <head>
+        <title></title>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <script type="text/javascript" src="js/jquery-1.11.0.min.js"></script>
+        <script type="text/javascript">
+          /*  $(document).ready(function (){
+               size_tr=$("#mylist li").size();
+               alert(size_tr);
+               x=3;
+               $('#mylist li:lt('+x+')').show();
+               
+               $('#loadmore').click(function (){
+                  x=(x+5<=size_tr)?x+5:size_tr;
+                  $('#mylist li:lt('+x+')').show();
+               });
+            });*/
+    
+            $(document).ready(function (){
+               size_tr=$("#mylist tr").size();
+               //alert(size_tr);
+               x=25;
+                $('#mylist tr:lt('+x+')').show();
+                $(window).scroll(function (){
+               //$('#loadmore').click(function (){
+                  x=(x+5<=size_tr)?x+5:size_tr;
+                    alert(x);
+                    $('#mylist tr:lt('+x+')').show();
+               });
+            });
+            function call1(data){
+          //        alert("calling");
+                 
+             
+            }
+        </script>
+        <style type="text/css">
+            #mylist tr{
+                display: none;
+            }
+            #loadmore{
+                color:green;
+                cursor: pointer;
+            }            
+        </style>
+    </head>
+    <body>
+        <table  border="1" id="table1">
+            <tr><th>Name</th><th>Std</th></tr>
+            <tbody id="mylist">
+            <tr><td>Mehul</td><td>1</td></tr>
+            <tr><td>Mehul</td><td>2</td></tr>
+            <tr><td>Mlk</td><td>3</td></tr>
+            <tr><td>Me</td><td>4</td></tr>
+            <tr><td>Mehul</td><td>5</td></tr>
+            <tr><td>Mehgghjul</td><td>6</td></tr>
+            <tr><td>Mehfgjgfjh</td><td>7</td></tr>
+            <tr><td>Medfgdl</td><td>8</td></tr>
+            <tr><td>Mehul</td><td>9</td></tr>
+            <tr><td>Mehukukl</td><td>10</td></tr>
+            <tr><td>Mehul</td><td>11</td></tr>
+            <tr><td>Mehusasl</td><td>12</td></tr>
+            <tr><td>Mehsdl</td><td>13</td></tr>
+            <tr><td>Mehsdl</td><td>14</td></tr>
+            <tr><td>Mehudfeopal</td><td>15</td></tr>
+            <tr><td>Mehul</td><td>11</td></tr>
+            <tr><td>Mehusasl</td><td>12</td></tr>
+            <tr><td>Mehsdl</td><td>13</td></tr>
+            <tr><td>Mehsdl</td><td>14</td></tr>
+            <tr><td>Mehudfeopal</td><td>15</td></tr>
+            <tr><td>Mehul</td><td>11</td></tr>
+            <tr><td>Mehusasl</td><td>12</td></tr>
+            <tr><td>Mehsdl</td><td>13</td></tr>
+            <tr><td>Mehsdl</td><td>14</td></tr>
+            <tr><td>Mehudfeopal</td><td>15</td></tr>
+            <tr><td>Mehul</td><td>11</td></tr>
+            <tr><td>Mehusasl</td><td>12</td></tr>
+            <tr><td>Mehsdl</td><td>13</td></tr>
+            <tr><td>Mehsdl</td><td>14</td></tr>
+            <tr><td>Mehudfeopal</td><td>15</td></tr>
+            <tr><td>Mehul</td><td>11</td></tr>
+            <tr><td>Mehusasl</td><td>12</td></tr>
+            <tr><td>Mehsdl</td><td>13</td></tr>
+            <tr><td>Mehsdl</td><td>14</td></tr>
+            <tr><td>Mehudfeopal</td><td>15</td></tr>
+            <tr><td>Mehul</td><td>11</td></tr>
+            <tr><td>Mehusasl</td><td>12</td></tr>
+            <tr><td>Mehsdl</td><td>13</td></tr>
+            <tr><td>Mehsdl</td><td>14</td></tr>
+            <tr><td>Mehudfeopal</td><td>15</td></tr>
+            <tr><td>Mehul</td><td>11</td></tr>
+            <tr><td>Mehusasl</td><td>12</td></tr>
+            <tr><td>Mehsdl</td><td>13</td></tr>
+            <tr><td>Mehsdl</td><td>14</td></tr>
+            <tr><td>Mehudfeopal</td><td>15</td></tr>
+            <tr><td>Mehul</td><td>11</td></tr>
+            <tr><td>Mehusasl</td><td>12</td></tr>
+            <tr><td>Mehsdl</td><td>13</td></tr>
+            <tr><td>Mehsdl</td><td>14</td></tr>
+            <tr><td>Mehudfeopal</td><td>15456</td></tr>
+            </tbody> 
+            <tr><td><div id="loadmore">show more..</div></td></tr>
+            <tr><td><input type="button" value="Comment"  /></td></tr>
+     </table>
+    
+   <!-- <ul id="mylist">
+        <li>Mehul</li>
+        <li>Mehul</li>
+        <li>Mehul</li>
+        <li>Mehul</li><li>Mehul</li>
+        <li>Mehul</li>
+        <li>Mehul</li>
+        <li>Mehul</li>
+        <li>Mehul</li>
+        <li>Mehul</li>
+        <li>Mehul</li>
+        <li>Mehul</li>
+        <li>Mehul</li>
+        <li>Mehul</li>
+        <li>Mehul</li>
+        <li>Mehul</li>
+        <li>Mehul</li>
+        <li>Mehul</li>
+        <li>Mehul</li>
+        <li>Mehul</li>
+        <li>Mehul</li>
+        
+    </ul>-->
+        
+    </body>
+</html>

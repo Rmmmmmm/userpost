@@ -1,0 +1,153 @@
+{ "post1":
+     [
+         {  
+            "usr":"Mehul",
+            "img":"images/1.jpg",
+            "p1":"Who going to support Digital India",
+            "commenter":
+                        [
+                            {
+                                "reviewer":"Mehul",
+                                "img":"images/1.jpg",
+                                "comment":"yes, i want to.."
+                            },
+                            {
+                                "reviewer":"Subhash",
+                                "img":"images/2.jpg",
+                                "comment":"I'm"
+                            },
+                            {
+                                "reviewer":"Manoj",
+                                "img":"images/3.jpg",
+                                "comment":"I'll support"
+                            },
+                            {
+                                    "reviewer":"Raju",
+                                    "img":"images/7.jpg",
+                                    "comment":"Happy Birthday"
+                            },
+                            {
+                                    "reviewer":"Raju",
+                                    "img":"images/7.jpg",
+                                    "comment":"Happy Birthday"
+                            },
+                            {
+                                    "reviewer":"Raju",
+                                    "img":"images/7.jpg",
+                                    "comment":"Happy Birthday"
+                            }
+                        ]
+         },
+         {   
+             "usr":"John",
+             "img":"images/john.jpg",
+             "p1":"Always help other to solve problem",
+              "commenter":
+                        [
+                             {
+                                    "reviewer":"Rajesh",
+                                    "img":"images/4.jpg",
+                                    "comment":"i am doing"
+                              },
+                              {
+                                    "reviewer":"Mehul",
+                                    "img":"images/1.jpg",
+                                    "comment":"i also am doing"
+                               }
+                         ]
+          },
+          {
+              "usr":"sandeep",
+              "img":"images/sandeep.jpg",
+              "p1":"Today Salman Khan Birthday",
+              "commenter":
+                        [
+                            {
+                                    "reviewer":"Rishikesh",
+                                    "img":"images/6.jpg",
+                                    "comment":"HBD Salam Khan"
+                            },
+                            {
+                                    "reviewer":"Mehul",
+                                    "img":"images/1.jpg",
+                                    "comment":"Happy Birthday"
+                            },
+                            {
+                                    "reviewer":"Raju",
+                                    "img":"images/7.jpg",
+                                    "comment":"Happy Birthday"
+                            }
+                        ]
+            },
+            {
+              "usr":"sandeep",
+              "img":"images/sandeep.jpg",
+              "p1":"Today Salman Khan Birthday",
+              "commenter":
+                        [
+                            {
+                                    "reviewer":"Rishikesh",
+                                    "img":"images/6.jpg",
+                                    "comment":"HBD Salam Khan"
+                            },
+                            {
+                                    "reviewer":"Mehul",
+                                    "img":"images/1.jpg",
+                                    "comment":"Happy Birthday"
+                            },
+                            {
+                                    "reviewer":"Raju",
+                                    "img":"images/7.jpg",
+                                    "comment":"Happy Birthday"
+                            }
+                        ]
+            },
+            {
+              "usr":"sandeep",
+              "img":"images/sandeep.jpg",
+              "p1":"Today Salman Khan Birthday",
+              "commenter":
+                        [
+                            {
+                                    "reviewer":"Rishikesh",
+                                    "img":"images/6.jpg",
+                                    "comment":"HBD Salam Khan"
+                            },
+                            {
+                                    "reviewer":"Mehul",
+                                    "img":"images/1.jpg",
+                                    "comment":"Happy Birthday"
+                            },
+                            {
+                                    "reviewer":"Raju",
+                                    "img":"images/7.jpg",
+                                    "comment":"Happy Birthday"
+                            }
+                        ]
+            },
+            {
+              "usr":"sandeep123",
+              "img":"images/sandeep.jpg",
+              "p1":"Today Salman Khan Birthday",
+              "commenter":
+                        [
+                            {
+                                    "reviewer":"Rishikesh",
+                                    "img":"images/6.jpg",
+                                    "comment":"HBD Salam Khan"
+                            },
+                            {
+                                    "reviewer":"Mehul",
+                                    "img":"images/1.jpg",
+                                    "comment":"Happy Birthday"
+                            },
+                            {
+                                    "reviewer":"Raju",
+                                    "img":"images/7.jpg",
+                                    "comment":"Happy Birthday"
+                            }
+                        ]
+            }
+     ]
+}
+

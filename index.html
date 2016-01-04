@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <title>User List</title>
+    <!-- Bootstrap -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="js/jquery-1.11.0.min.js"></script>
+    <style type="text/css">
+        body {
+  padding-top: 50px;
+}
+.starter-template {
+  padding: 40px 15px;
+  text-align: center;
+}
+.td1{
+    text-align: left;
+    vertical-align: top;
+    height: 20px;
+   
+}
+#cdata,#cmt_tag,#show1
+{display: none;}
+#show1{
+    color:green;
+    cursor: pointer;
+}
+
+#give_space{
+    padding-top: 20px;
+}
+#table_style{
+    background-color: #ffffff;
+    width:600px 
+}
+   </style>
+  <script type="text/javascript">
+	function ajax_get_json(){
+            
+    var hr = new XMLHttpRequest();
+    hr.open("GET","userDetail.json", true);
+    hr.setRequestHeader("Content-type", "application/json");
+    hr.onreadystatechange = function() {
+	    if(hr.readyState == 4 && hr.status == 200) {
+			var data=JSON.parse(hr.responseText);
+                        var results=document.getElementById("results1");
+			//results.innerHTML="<li><a href='#'>"+data.u1.user1+" "+data.u1.lname+"</a></li>";'"+data[obj].user1+"'
+                        for(var obj in data)
+                            {
+                                results.innerHTML+="<li ><a href='#' id='userList1' onclick=display('"+data[obj].user1+"');>"
+                                        +data[obj].user1+"</a></li>";
+                            
+                            }
+            }
+    }
+    hr.send(null); 
+   
+}
+
+function display(getdata)
+{
+        alert(getdata);
+        $("#sidebar").hide('slow');
+        $("#user_post").show('slow');
+        
+        var hr = new XMLHttpRequest();
+        hr.open("GET","postComment.json", true);
+        hr.setRequestHeader("Content-type", "application/json");
+        hr.onreadystatechange = function() {
+	if(hr.readyState == 4 && hr.status == 200) {
+			var data=JSON.parse(hr.responseText);
+                       
+                        //alert(data.post1[0].commenter.length);
+                        var showdata=document.getElementById("showData");
+            //results.innerHTML="<li><a href='#'>"+data.u1.user1+" "+data.u1.lname+"</a></li>";
+                        //for(var obj in data)
+                            //{   
+                  
+                            //showData.innerHTML='<img src="'+data.post1[0].img+'" width=60 height=60/>';
+                            var htmlData="";
+                            for (var i=0;i<data.post1.length;i++){
+                                htmlData +=
+                           '<table border="1" cellspacing="5" id="table_style">\n\
+                                <tr>\n\
+                                  <td rowspan="2" style="width: 60px;" id="user_img" ><img src="'+data.post1[i].img+'" width="60" height="60"  /></td>\n\
+                                  <td class="td1" id="name1">'+data.post1[i].usr+'</td>\n\
+                                </tr>\n\
+                                 <tr>\n\
+                                        <td class="td1">'+data.post1[i].p1+'</td> \n\
+                                </tr>\n\
+                                    <tr id="cmt_tag"><td colspan="2">&nbsp;Comment:</td></tr><tbody id="cdata">';
+                                    for(var j=0;j<data.post1[i].commenter.length;j++){
+                                htmlData += 
+                                      '<tr>\n\
+                                             <td style="width: 60px;"><img src="'+data.post1[i].commenter[j].img+'" width="60" height="60"  /></td>\n\
+                                             <td class="td1" >'+data.post1[i].commenter[j].reviewer+'</td>\n\
+                                         </tr>\n\
+                                        ';}
+                                htmlData +=
+                                '</tbody><tr><td colspan="2" align="right"><div id="show1" onclick="showCommentData();">show more..</div></td></tr>\n\
+                                <tr>\n\
+                                    <td colspan="2" align="right" ><input type="button"  value="Comment" onclick="c1()" /></td>\n\
+                                </tr>\n\
+                                </table><div id="give_space"></div>';
+                            }
+                                showdata.innerHTML += htmlData;
+                                //uname.innerHTML=data[obj].user1;
+                                //uimage.innerHTML="<img src='"+data[obj].img_path+"' width='60' height='60'  />";
+                                    
+                            
+                            //}
+            }
+    }
+    hr.send(null); 
+}
+function showCommentData(){
+                //alert("show");        
+                x=3;
+                incre=3;
+                size_tr=$("#cdata tr").size();
+                alert(size_tr);
+                $('#cdata tr:lt('+x+')').show();
+                alert("show calling");
+                x=(x+incre<=size_tr)?x+incre:size_tr;
+                              
+}
+            
+function c1(){
+        alert("calling");
+        $('#cmt_tag').show();
+        $('#show1').show();
+        $('#cdata tr:lt('+x+')').show();
+        alert("after cdata ");
+}
+</script>
+  </head>
+  <body onload="ajax_get_json();">
+      <nav class="navbar navbar-inverse navbar-fixed-top">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="#">Project name</a>
+        </div>
+        <div id="navbar" class="collapse navbar-collapse">
+          <ul class="nav navbar-nav">
+              <li class="active"><a href="index.php">Home</a></li>
+            
+          </ul>
+        </div><!--/.nav-collapse -->
+      </div>
+    </nav>
+      <div class="col-sm-3 col-md-2 sidebar-offcanvas" id="sidebar" role="navigation">
+                      
+          <ul class="nav nav-sidebar" >
+              <li><div style="background-color: #428bca;padding-top: 10px;margin-top: 50px;font-size:16px;color: white;  ">
+                      &nbsp;&nbsp;&nbsp;User List</div></li>
+          </ul> 
+          <ul class="nav nav-sidebar" id="results1"></ul>
+          
+        </div><!--/span-->
+    <div class="container" id="retial">
+
+      <div class="starter-template" id="showData">
+               
+        
+     
+      </div>
+    </div><!-- /.container -->
+    
+    <footer class="footer">
+      <div class="container">
+        <p class="text-muted">Place sticky footer content here.</p>
+      </div>
+    </footer>
+
+   
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="js/bootstrap.min.js"></script>
+  </body>
+</html>

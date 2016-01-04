@@ -1,0 +1,34 @@
+{ 
+    "u1":{
+            "user1":"Mehul", 
+            "age":23,
+            "img_path":"images/1.jpg",
+            "post":"Digital India 1",
+            "comment":[ "I m Kalam","Mehul Like","Nice","Superb!!"]
+         }, 
+    
+    "u2":{
+            "user1":"Suraj",
+            "age":24,
+            "img_path":"images/2.jpg",
+            "post":"Upcomming of New Software 1",
+            "comment":[ "Which one?","Tell me what it is","Tell me"]
+         },
+    
+    "u3":{
+            "user1":"John",
+            "age":25,
+             "img_path":"images/3.jpg",
+             "post":"Today Salman Khan Birthday",
+            "comment":[ "Happy birthday","HBD","HBD Salman Khan","Happy Birthday Salman"]
+         },
+                 
+    "u4":{
+            "user1":"Sandeep",
+             "age":26,
+             "img_path":"images/4.jpg",
+            "post":"Software is becoming daily routing of life",
+            "comment":[ "yes","not always","yes!!","Superb!!"]
+         }
+}
+
